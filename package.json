@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/Zaidtx/Liri/issues"
   },
-  "homepage": "https://github.com/Zaidtx/Liri#readme"
+  "homepage": "https://github.com/Zaidtx/Liri#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
 }
