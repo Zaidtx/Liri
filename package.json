@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Zaidtx/Liri#readme",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "inquirer": "^7.0.0"
   }
 }
