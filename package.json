@@ -1,0 +1,25 @@
+{
+  "name": "liri",
+  "version": "1.0.0",
+  "description": "CLI Application for finding things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zaidtx/Liri.git"
+  },
+  "keywords": [
+    "Liri",
+    "Spotify",
+    "OMDB",
+    "BandsInTown"
+  ],
+  "author": "Zaid Alhir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zaidtx/Liri/issues"
+  },
+  "homepage": "https://github.com/Zaidtx/Liri#readme"
+}
