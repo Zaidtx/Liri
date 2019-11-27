@@ -46,3 +46,54 @@ const areYouDone = [
 
 ];
 
+
+function action() {
+    inquirer.prompt(questions).then(function (response) {
+        console.log(response, "\n======");
+        callFunctions(response.action, response.searchFor);
+        // CALL API CODE
+        inquirer.prompt(areYouDone).then(function (searchAgain) {
+            if (searchAgain.continue) {
+                action();
+            }
+        });
+    });
+}
+
+
+function callFunctions(action, searchFor) {
+
+    switch (action) {
+        case "search for a song": getSongInfo(searchFor);
+        break;
+        case "Search for a Movie": getMovieInfro(searchFor);
+        break;
+        case "Search for event": getEventInfo(searchFor);
+        break;
+        default: console.log("I don't know what are you talking about");
+
+
+    }
+
+}
+
+function getSongInfo(song) {
+    console.log("sptify api");
+    spotify.searhc({ type: 'track', query: song,limit:5 }, function(err,data) {
+        if (err) {
+            return console.log('Error occurred' + err);
+
+        }
+        
+        //console log 
+        const songs =data.tracks.items;
+        for(var i=0; i<songs.length; i++){
+            console.log("Artist: " +songs[i].artists[0].name);
+            console.log("Song Name: " +songs[i].name);
+            console.log("Preview Song: " +songs[i].preview_url);
+            console.log("Album: " +songs[i].album.name)
+            console.log("_____________________")
+        }
+    });
+}
+
